@@ -32,3 +32,26 @@ spec:
   # docker run -d --name nginx nginx
   - name: nginx
     image: nginx
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+
+spec:
+  affinity:
+    podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - store
+            topologyKey: "kubernetes.io/hostname"
+  containers:
+  # docker run -d --name nginx nginx
+  - name: nginx
+    image: nginx
