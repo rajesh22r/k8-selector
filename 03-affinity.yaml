@@ -12,7 +12,7 @@ spec:
           - key: hardware
             operator: In
             values:
-            - gpu
+            - hrfg
   containers:
   # docker run -d --name nginx nginx
   - name: nginx
