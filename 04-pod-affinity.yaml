@@ -38,7 +38,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod2
+  name: pod3
 
 spec:
   affinity:
