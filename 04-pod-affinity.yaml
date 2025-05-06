@@ -46,10 +46,10 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
-              - key: app
+              - key: purpose
                 operator: In
                 values:
-                - store
+                - affinity
             topologyKey: "kubernetes.io/hostname"
   containers:
   # docker run -d --name nginx nginx
